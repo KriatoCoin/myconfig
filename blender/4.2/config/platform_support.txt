@@ -1,0 +1,2 @@
+{Intel/Mesa Intel(R) HD Graphics 520 (SKL GT2)/4.6 (Core Profile) Mesa 24.2.4-arch1.1}=SUPPORTED
+{AMD/AMD Radeon RX 580 Series (radeonsi, polaris10, LLVM 18.1.8, DRM 3.54, 6.6.56-1-lts)/4.6 (Core Profile) Mesa 24.2.4-arch1.1}=SUPPORTED

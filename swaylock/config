@@ -1,0 +1,26 @@
+clock
+timestr=%R
+datestr=%a, %e of %B
+image=~/Downloads/bg1.png
+fade-in=0.2
+effect-pixelate=5
+indicator
+indicator-radius=150
+indicator-thickness=20
+inside-color=00000066
+inside-clear-color=00000066
+inside-caps-lock-color=22000066
+inside-ver-color=aaaaaa66
+inside-wrong-color=88331188
+key-hl-color=ffffffaa
+layout-text-color=ffffffff
+ring-color=ffffffff
+ring-clear-color=ffffffff
+ring-caps-lock-color=ffffffff
+ring-ver-color=ffffffff
+ring-wrong-color=ffffffff
+text-color=ffffffff
+text-clear-color=ffffffff
+text-caps-lock-color=ffffffff
+text-ver-color=ffffffff
+text-wrong-color=ffffffff

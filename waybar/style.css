@@ -1,0 +1,175 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: 500ms;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ee1824;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+    background-color: #300456;
+}
+
+#workspaces {
+  background-color: #110135;
+}
+
+#workspaces button {
+    margin: 0 5px;
+    padding: 0 5px;
+    border-radius: 15px;
+    background-color: #080056;
+    color: #ffffff;
+    transition: all 200ms ease-out;
+}
+
+#workspaces button:hover {
+    background: #0a006b;
+}
+
+#workspaces button.active {
+  padding: 0 30px;
+  background: #0a006b;
+  transition: all 200ms ease-out;
+}
+
+#workspaces button.focused {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#window {
+  background-color: #004;
+  transition: all 200ms ease-in-out;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#power-profiles-daemon {
+  border-radius: 10;
+    padding: 0 15px;
+    color: #ffffff;
+}
+
+#window,
+#workspaces {
+  border-radius: 15;
+  padding: 4px;
+}
+
+#clock {
+    background-color: #540405;
+}
+
+#battery {
+    background-color: #690712;
+    color: #ffffff;
+}
+
+#battery.charging, #battery.plugged {
+    color: #ffffff;
+    background-color: #080056;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#power-profiles-daemon {
+    padding-right: 15px;
+}
+
+#power-profiles-daemon.performance {
+    background-color: #ff2222;
+    color: #000000;
+}
+
+#power-profiles-daemon.balanced {
+    background-color: #390748;
+    color: #ffffff;
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: #12157a;
+    color: #ffffff;
+}
+
+#cpu {
+    background-color: #0360a8;
+    color: #000000;
+}
+
+#memory {
+    background-color: #3a0256;
+}
+
+#network {
+    background-color: #1c1963;
+}
+
+#network.disconnected {
+    background-color: #f53c3c;
+}
+
+#pulseaudio {
+    background-color: #5b03a8;
+    color: #ffffff;
+    transition: all 100ms ease-in-out;
+}
+
+#pulseaudio.muted {
+    background-color: #843ac4;
+    color: #ffffff;
+    transition: all 100ms ease-in-out;
+}
+
+#temperature {
+  background-color: #08005b;
+}
+
+#temperature.critical {
+  background-color: #eb4d4b;
+}
